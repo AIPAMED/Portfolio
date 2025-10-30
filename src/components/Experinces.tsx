@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import resumeFile from "../assets/Iyad-Arusi.pdf";
 import "../styles.css";
 
