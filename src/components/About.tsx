@@ -16,7 +16,7 @@ export default function About() {
       }
     },
     {
-      threshold: window.innerWidth < 768 ? 0.1 : 0.3, // 👈 smaller threshold for mobile
+      threshold: window.innerWidth < 768 ? 0.1 : 0.3, //  smaller threshold for mobile
       rootMargin: window.innerWidth < 768 ? "0px 0px -5% 0px" : "0px 0px -15% 0px",
     }
   );
@@ -71,7 +71,7 @@ export default function About() {
   );
 }
 
-/* 🎯 number animation logic */
+/* number animation logic */
 function AnimatedNumber({ value }: { value: number }) {
   const [num, setNum] = useState(0);
 

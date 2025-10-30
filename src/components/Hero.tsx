@@ -6,11 +6,10 @@ export default function Hero() {
     <section className="hero-grid" id="home">
       <div className="glow-right"></div>
 
-      {/* ✅ Right side image */}
+      {/*  Right side image */}
       <div className="right">
         <div className="image-wrapper">
           <img src={iyad} alt="Iyad" />
-          {/* ✅ You can uncomment below if needed later */}
           {/*
           <div className="price-tag">
             <span className="highlight">$</span>75.00
@@ -20,7 +19,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ✅ Left side text */}
+      {/* Left side text */}
       <div className="left">
         <h1 className="name">
           IYAD Arusi<span className="highlight">.</span>

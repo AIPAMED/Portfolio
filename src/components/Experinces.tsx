@@ -52,7 +52,7 @@ export default function Experiences() {
 
   return (
     <section className="what-i-do" id="experience">
-      {/* 🔹 LEFT MENU */}
+      {/*  LEFT MENU */}
       <div className="left-menu">
         <div className="menu-top">//EXPERIENCES</div>
 
@@ -69,7 +69,7 @@ export default function Experiences() {
         </ul>
       </div>
 
-      {/* 🔹 RIGHT PANEL */}
+      {/*  RIGHT PANEL */}
       <div className="right-panel full-text">
         <hr className="divider" />
 
@@ -88,7 +88,7 @@ export default function Experiences() {
           ))}
         </div>
 
-        {/* 🔹 Download Resume */}
+        {/*  Download Resume */}
         <a
           href={resumeFile}
           download="Iyad-Arusi.pdf"

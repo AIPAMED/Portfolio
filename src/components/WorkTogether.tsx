@@ -30,7 +30,6 @@ export default function WorkTogether() {
     };
   }, []);
 
-  // ✅ Your skill words (looped infinitely)
   const skills: string[] = [
     "Project Management",
     "Strategic Planning",
@@ -43,7 +42,7 @@ export default function WorkTogether() {
     <section className="work-section" id="contact">
       <div className="glow-right"></div>
 
-      {/* 🔹 Scrolling Bar */}
+      {/*  Scrolling Bar */}
       <div className="scroll-bar">
         <div className="scroll-track">
           {Array(8)
@@ -55,7 +54,7 @@ export default function WorkTogether() {
         </div>
       </div>
 
-      {/* 🔹 Main Content */}
+      {/*  Main Content */}
       <div className="work-content">
         <div className="long-name">IYAD</div>
         <h1 ref={headingRef}>
@@ -65,7 +64,7 @@ export default function WorkTogether() {
           CONTACT WITH ME
         </button>
 
-        {/* 🔹 Contact Card */}
+        {/*  Contact Card */}
         <ContactCard show={showContact} onClose={() => setShowContact(false)} />
       </div>
 

@@ -9,7 +9,7 @@ export default function Project() {
     <div className="project" id="projects">
       {!expanded ? (
         <>
-          {/* 🔹 Left Column */}
+          {/*  Left Column */}
           <div className="left-column">
             <div className="about-btn">ABOUT PROJECT</div>
             <p className="left-description">
@@ -24,7 +24,7 @@ export default function Project() {
             <h2 className="left-title">PROJECT TITLE GOES HERE</h2>
           </div>
 
-          {/* 🔹 Right Column */}
+          {/*  Right Column */}
           <div className="right-column">
             <h4>My Work</h4>
             <h1 className="right-title">My Recent Project That I Done</h1>

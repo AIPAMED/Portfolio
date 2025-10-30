@@ -14,7 +14,7 @@
   src: url('./assets/GinzaNarrow-Light.otf') format('opentype');
   font-weight: 100;
 }
-/* ✅ QB One font family setup */
+/*  QB One font family setup */
 @font-face {
   font-family: "QB One";
   src: url("./assets/BoxTube Labs - QB One Thin.ttf") format("truetype");
@@ -69,7 +69,7 @@ body, html, #root {
   color: white;
   font-family: 'Qb One';
   font-weight: 100;
-    overflow-x: visible !important; /* ✅ allows horizontal overflow */
+    overflow-x: visible !important; /*  allows horizontal overflow */
 
 }
 
@@ -85,14 +85,14 @@ body, html, #root {
   background-color: orangered;
   border: none;
   color: white;
-  padding: 12px 28px;  /* smaller padding = smaller button */
+  padding: 12px 28px;  
   border-radius: 6px;
-  font-size: 14px;     /* slightly smaller font */
+  font-size: 14px;     
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
   margin-top: 30px;
-  align-self: flex-start; /* keeps it aligned with text on the left */
+  align-self: flex-start;
   width: fit-content;     /* button adjusts to text width */
   z-index: 3;
 }
@@ -175,7 +175,7 @@ background: radial-gradient(circle, rgba(255, 89, 0, 0.5), transparent 60%),
   overflow: hidden;
 }
 
-/* ✅ Base visible bar style */
+/*  Base visible bar style */
 .percentage-box {
   position: relative;
   height: 50%;
@@ -758,12 +758,10 @@ nav span{
 }
 
 
-/*Experinces*/
-/* layout */
 /* layout */
 .what-i-do {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* ✅ left ~40%, right ~60% */
+  grid-template-columns: 1fr 1.5fr; /* left ~40%, right ~60% */
   gap: 60px;
   width: 88%;
   max-width: 1300px;
@@ -796,7 +794,7 @@ nav span{
 .left-menu .menu-item {
   font-family: 'GinzaNarrow', "QB One", sans-serif;
   font-weight: 400;
-  font-size: 40px;              /* ✅ larger text for balance */
+  font-size: 40px;              /*  larger text for balance */
   line-height: 1.1;
   color: rgba(255, 255, 255, 0.18);
   margin: 18px 0;
@@ -809,7 +807,7 @@ nav span{
 .left-menu .menu-item.active {
   color: #fff;
   font-weight: 700;
-  font-size: 48px;             /*  bolder & visually dominant */
+  font-size: 48px;             
 }
 
 .left-menu .menu-item:hover {
@@ -843,7 +841,7 @@ nav span{
   font-family: 'poppins', sans-serif;
   font-weight: bold;
   max-width: 95%;
-  font-size: 16px; /* ✅ slightly bigger */
+  font-size: 16px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -939,7 +937,6 @@ nav span{
 
 
 /*********work section************/
-/* -------- Work Together Section -------- */
 .work-section {
   background-color: #0c0c0c;
   color: #fff;
@@ -949,8 +946,7 @@ nav span{
   padding-bottom: 10px;
 }
 
-/* 🔹 Scrolling bar (inside section) */
-/* 🔹 Scrolling bar (inside section) */
+/*  Scrolling bar (inside section) */
 .scroll-bar {
   width: 100%;
   background: #fff;
@@ -965,14 +961,14 @@ nav span{
 /* The moving track */
 .scroll-track {
   display: flex;
-  align-items: center;        /* ✅ centers text vertically */
+  align-items: center;        /* centers text vertically */
   white-space: nowrap;
   animation: scrollText 40s linear infinite;
 }
 
 /* Each text block */
 .scroll-track span {
-  display: inline-flex;       /* ✅ allows centering inside span */
+  display: inline-flex;       /*  allows centering inside span */
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -996,14 +992,14 @@ nav span{
   }
 }
 
-/* 🔹 Main content */
+/*  Main content */
 /* -------- Work Together Section -------- */
 .work-section {
   background-color: #0c0c0c;
   color: #fff;
   text-align: center;
   position: relative;
-  overflow: visible;   /* ✅ allow full text to be seen */
+  overflow: visible;   /* allow full text to be seen */
   padding-bottom: 40px;
   padding-left: clamp(20px, 8vw, 120px);/* space on left */
   padding-right: clamp(20px, 8vw, 120px);/* space on right */
@@ -1018,8 +1014,8 @@ nav span{
   height: 45px;
   display: flex;
   align-items: center;
-  margin: 0;              /* ❌ remove bottom margin gap */
-  position: absolute;     /* ✅ sits at top of section */
+  margin: 0;              /* remove bottom margin gap */
+  position: absolute;     /*  sits at top of section */
   top: 0;
   left: 0;
   z-index: 10;
@@ -1053,7 +1049,7 @@ nav span{
   to { transform: translateX(0); }
 }
 
-/* 🔹 Main content */
+/*  Main content */
 .work-content {
   position: relative;
   display: flex;
@@ -1082,7 +1078,7 @@ nav span{
   line-height: 1;
   text-align: center;
 
-  /* ✅ fixes the right crop and left gap */
+  /*  fixes the right crop and left gap */
   max-width: 90vw;      /* ensures it never exceeds viewport width */
   width: max-content;   /* fits exactly around the text */
   padding: 0 2vw;       /* even breathing space on both sides */
@@ -1126,7 +1122,7 @@ nav span{
 }
 
 
-/* ✅ button 80px below h1 visually */
+/*  button 80px below h1 visually */
 .contact-btn {
   position: absolute;
   top: calc(50% + 160px); /* 80px below h1 center */
@@ -1255,11 +1251,32 @@ nav span{
   background-color: #ff7333;
 }
 
-/* ---------- FINAL SIDEBAR NAVBAR ---------- */
+/*  Make all text boxes the same consistent width */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;             /* ensures full available width */
+  max-width: 500px;        /* keeps it elegant, not too wide */
+  align-self: center;      /* centers within the form */
+  box-sizing: border-box;  /* includes padding in total width */
+}
 
-/* -------------------------- */
-/* ✅ FINAL RESPONSIVE SIDEBAR */
-/* -------------------------- */
+/* 📱 Small screens */
+@media (max-width: 480px) {
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 90%;       /* keeps proportional on smaller screens */
+  }
+}
+
+/*  Extra small screens (≤320px) */
+@media (max-width: 320px) {
+  .contact-form input,
+  .contact-form textarea {
+    max-width: 100%;
+  }
+}
+
+/* FINAL RESPONSIVE SIDEBAR */
 
 /* Base hamburger icon */
 .hamburger {
@@ -1268,7 +1285,7 @@ nav span{
   gap: 5px;
   cursor: pointer;
   z-index: 2000;
-  position: fixed; /* ✅ stays visible when scrolling */
+  position: fixed; /*  stays visible when scrolling */
   top: 25px;
   left: 25px;
 }
@@ -1279,7 +1296,7 @@ nav span{
   transition: all 0.3s ease;
 }
 
-/* Hamburger → "X" */
+/*   "X" */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(7px);
 }
@@ -1290,7 +1307,7 @@ nav span{
   transform: rotate(-45deg) translateY(-7px);
 }
 
-/* 🌍 Sidebar mode (≤768px) */
+/*  Sidebar mode (≤768px) */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -1339,11 +1356,11 @@ nav span{
 
   .nav-links li a:hover,
   .nav-links li a.active {
-    color: orangered; /* ✅ active or hover highlight */
+    color: orangered; /* active or hover highlight */
   }
 }
 
-/* 📱 Full width sidebar on very small screens */
+/*  Full width sidebar on very small screens */
 @media (max-width: 480px) {
   .nav-links {
     width: 100%;
@@ -1373,9 +1390,9 @@ nav span{
 
 
 
-/* 🌍 Universal 4 main breakpoints */
+/* 4 main breakpoints */
 
-/* 💻 Large screens (desktops & laptops) — 1200px and below */
+/*  Large screens (desktops & laptops) — 1200px and below */
 @media (max-width: 1200px) {
   .hero-grid {
     column-gap: 4rem;
@@ -1389,7 +1406,7 @@ nav span{
   }
 }
 
-/* 💻 Tablets & small laptops — 992px and below */
+/*  Tablets & small laptops — 992px and below */
 @media (max-width: 992px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1428,7 +1445,7 @@ nav span{
   }
 }
 
-/* 📱 Small tablets & large phones — 768px and below */
+/*  Small tablets & large phones — 768px and below */
 @media (max-width: 768px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -1437,7 +1454,7 @@ nav span{
   }
 
   .right {
-    display: none; /* 🧡 Hide Iyad's image on small tablets */
+    display: none; /*  Hide Iyad's image on small tablets */
   }
 
   .left {
@@ -1462,7 +1479,7 @@ nav span{
   }
 }
 
-/* 📱 Small phones — 480px and below */
+/*  Small phones — 480px and below */
 @media (max-width: 480px) {
   .hero-grid {
     padding: 3rem 1rem;
@@ -1496,7 +1513,7 @@ nav span{
 
 
 
-/* 📱 Ultra-small screens (≤320px) */
+/*  Ultra-small screens (≤320px) */
 @media (max-width: 320px) {
   /* ===== Navbar Fixes ===== */
   .hamburger {
@@ -1566,9 +1583,9 @@ nav span{
     overflow-x: hidden; /* prevent any dark bar or side scroll */
   }
 }
-/* ✅ FINAL — keeps full styling, one skill per row, scales & centers properly */
+/*  FINAL — keeps full styling, one skill per row, scales & centers properly */
 
-/* 💻 Large screens (≤1200px) */
+/*  Large screens (≤1200px) */
 @media (max-width: 1200px) {
   .columns {
     gap: 20px;
@@ -1578,7 +1595,7 @@ nav span{
   }
 }
 
-/* 💻 Tablets & small laptops (≤992px) */
+/*  Tablets & small laptops (≤992px) */
 @media (max-width: 992px) {
   .columns {
     flex-wrap: wrap;
@@ -1605,7 +1622,7 @@ nav span{
   }
 }
 
-/* 📱 Tablets & large phones (≤768px) */
+/*  Tablets & large phones (≤768px) */
 @media (max-width: 768px) {
   .columns {
     flex-direction: column;
@@ -1659,7 +1676,7 @@ nav span{
   }
 }
 
-/* 🪶 Ultra small devices (≤320px) */
+/*  Ultra small devices (≤320px) */
 @media (max-width: 320px) {
   .columns {
     flex-direction: column;
@@ -1697,9 +1714,9 @@ nav span{
   }
 }
 
-/* ✅ FINAL PROJECT SECTION RESPONSIVENESS — same style, one per row, proportional scale */
+/* FINAL PROJECT SECTION RESPONSIVENESS — same style, one per row, proportional scale */
 
-/* 💻 Large screens (≤1200px) */
+/*  Large screens (≤1200px) */
 @media (max-width: 1200px) {
   .project {
     gap: 40px;
@@ -1715,7 +1732,7 @@ nav span{
   }
 }
 
-/* 💻 Tablets & small laptops (≤992px) */
+/*  Tablets & small laptops (≤992px) */
 @media (max-width: 992px) {
   .project {
     flex-direction: column;
@@ -1756,7 +1773,7 @@ nav span{
   }
 }
 
-/* 📱 Tablets & large phones (≤768px) */
+/*  Tablets & large phones (≤768px) */
 @media (max-width: 768px) {
   .project {
     flex-direction: column;
@@ -1794,7 +1811,7 @@ nav span{
   }
 }
 
-/* 📱 Small phones (≤480px) */
+/*  Small phones (≤480px) */
 @media (max-width: 480px) {
   .project {
     flex-direction: column;
@@ -1825,7 +1842,7 @@ nav span{
   }
 }
 
-/* 🪶 Ultra small devices (≤320px) */
+/*  Ultra small devices (≤320px) */
 @media (max-width: 320px) {
   .project {
     flex-direction: column;
@@ -1862,9 +1879,9 @@ nav span{
     font-size: 12px;
   }
 }
-/* ✅ FINAL EXPERIENCE SECTION RESPONSIVENESS — keeps left layout, never breaks */
+/*  FINAL EXPERIENCE SECTION RESPONSIVENESS — keeps left layout, never breaks */
 
-/* 💻 Large screens (≤1200px) */
+/*  Large screens (≤1200px) */
 @media (max-width: 1200px) {
   .what-i-do {
     gap: 50px;
@@ -1875,7 +1892,7 @@ nav span{
   .right-panel.full-text .about-block p { font-size: 15px; }
 }
 
-/* 💻 Tablets & small laptops (≤992px) */
+/*  Tablets & small laptops (≤992px) */
 @media (max-width: 992px) {
   .what-i-do {
     grid-template-columns: 1fr;
@@ -1916,7 +1933,7 @@ nav span{
   .download-resume { text-align: left; display: inline-block; margin-left: 0; }
 }
 
-/* 📱 Tablets & large phones (≤768px) */
+/*  Tablets & large phones (≤768px) */
 @media (max-width: 768px) {
   .what-i-do {
     grid-template-columns: 1fr;
@@ -1939,7 +1956,7 @@ nav span{
   .tags-row { justify-content: flex-start; }
 }
 
-/* 📱 Small phones (≤480px) */
+/*  Small phones (≤480px) */
 @media (max-width: 480px) {
   .what-i-do {
     grid-template-columns: 1fr;
@@ -1973,7 +1990,7 @@ nav span{
   .download-resume { font-size: 13px; }
 }
 
-/* 🪶 Ultra small devices (≤320px and below) */
+/*  Ultra small devices (≤320px and below) */
 @media (max-width: 320px) {
   html, body { overflow-x: hidden; }  /* prevent horizontal scroll */
 
@@ -2031,9 +2048,9 @@ nav span{
     margin-top: 10px;
   }
 }
-/* ✅ FINAL WORK TOGETHER RESPONSIVENESS — same design, perfect scale */
+/* FINAL WORK TOGETHER RESPONSIVENESS — same design, perfect scale */
 
-/* 💻 Large screens (≤1200px) */
+/* Large screens (≤1200px) */
 @media (max-width: 1200px) {
   .work-content h1 {
     font-size: clamp(70px, 8vw, 110px);
@@ -2050,7 +2067,7 @@ nav span{
   }
 }
 
-/* 💻 Tablets & small laptops (≤992px) */
+/*  Tablets & small laptops (≤992px) */
 @media (max-width: 992px) {
   .work-section {
     padding-left: 6vw;
@@ -2074,7 +2091,7 @@ nav span{
   }
 }
 
-/* 📱 Tablets & large phones (≤768px) */
+/*  Tablets & large phones (≤768px) */
 @media (max-width: 768px) {
   .scroll-bar {
     height: 40px;
@@ -2178,7 +2195,6 @@ nav span{
     font-size: 8px;
   }
 }
-/* 🧩 FIX: Long name full visibility and right spacing on small screens */
 @media (max-width: 600px) {
   .long-name {
     font-size: clamp(80px, 24vw, 140px); /* scales fluidly */
@@ -2204,7 +2220,7 @@ nav span{
   }
 }
 
-/* 🪶 Under 400px — keeps all visible and centered */
+/*  Under 400px — keeps all visible and centered */
 @media (max-width: 400px) {
   .long-name {
     font-size: clamp(60px, 22vw, 90px);
@@ -2223,7 +2239,7 @@ nav span{
   }
 }
 
-/* 🪶 Micro screens (≤320px) */
+/*  Micro screens (≤320px) */
 @media (max-width: 320px) {
   .long-name {
     font-size: clamp(50px, 20vw, 80px);
@@ -2234,7 +2250,6 @@ nav span{
     text-align: center;
   }
 }
-/* ✅ FIX: Center the Close button under the Send button on all screens */
 
 /* Make sure the close button has its own layout */
 .contact-form {
@@ -2271,7 +2286,7 @@ nav span{
   background-color: #ff7333;
 }
 
-/* 🪶 Small tweaks for smaller screens */
+/*  Small tweaks for smaller screens */
 @media (max-width: 480px) {
   .contact-form {
     gap: 14px;
