@@ -2,32 +2,32 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles.css";
 
 export default function About() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        // 🔁 triggers each time section enters/leaves viewport
-        if (entry.isIntersecting) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      },
-      {
-        threshold: 0.3,
-        rootMargin: "0px 0px -15% 0px", // more natural trigger
+ useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        setVisible(true);
+      } else {
+        setVisible(false);
       }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    },
+    {
+      threshold: window.innerWidth < 768 ? 0.1 : 0.3, // 👈 smaller threshold for mobile
+      rootMargin: window.innerWidth < 768 ? "0px 0px -5% 0px" : "0px 0px -15% 0px",
     }
+  );
 
-    return () => observer.disconnect();
-  }, []);
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
 
   const skills = [
     { title: "Operation Management", id: "01", percent: 75 },
@@ -42,7 +42,7 @@ export default function About() {
       <div className="glow-right" />
       <h1>//About Me</h1>
       <p className="about-intro">
-        Combining Data-Driven Decision-Making  
+        Combining Data-Driven Decision-Making
         <span className="shady-text"> With Teams Management!</span>
       </p>
 
@@ -72,7 +72,7 @@ export default function About() {
 }
 
 /* 🎯 number animation logic */
-function AnimatedNumber({ value }) {
+function AnimatedNumber({ value }: { value: number }) {
   const [num, setNum] = useState(0);
 
   useEffect(() => {

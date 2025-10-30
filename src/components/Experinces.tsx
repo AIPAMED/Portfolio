@@ -1,29 +1,45 @@
 import React, { useState } from "react";
-import resumeFile from "../assets/Iyad-Arusi.pdf"; // ✅ import resume file
+import resumeFile from "../assets/Iyad-Arusi.pdf";
+import "../styles.css";
 
-const Experiences = () => {
-  const [active, setActive] = useState("MBA");
+export default function Experiences() {
+  const [active, setActive] = useState<string>("MBA");
 
-  const content = {
+  const content: Record<
+    string,
+    { about: string; tags: string[] }
+  > = {
     "Department Manager": {
       about:
         "Lead strategic and operational management of the university’s largest department (800+ students, 150+ faculty), acting as the primary liaison between academic leadership, external partners, and internal stakeholders.",
-      tags: ["Strategic Leadership", "Operations Management", "Stakeholder Communication"],
+      tags: [
+        "Strategic Leadership",
+        "Operations Management",
+        "Stakeholder Communication",
+      ],
     },
     "Research Project Manager": {
       about:
         "Managed the full lifecycle of 7 international clinical trials across multiple sites, overseeing planning, execution, data integrity, and close-out processes.",
-      tags: ["Project Lifecycle Management", "Data Analysis", "Cross-Functional Coordination"],
+      tags: [
+        "Project Lifecycle Management",
+        "Data Analysis",
+        "Cross-Functional Coordination",
+      ],
     },
     "Team Leader (Medicine)": {
       about:
         "Led multidisciplinary care teams under high-stress, resource-limited conditions, developing critical leadership, prioritization, and decision-making skills transferable to fast-paced business environments.",
       tags: ["Crisis Management", "Team Leadership", "Decision Making"],
     },
-    "MBA": {
+    MBA: {
       about:
-        "Regent University, Virginia Beach, USA | 2021 – 2023 Focus on Strategic planning, data-driven operations, organizational leadership",
-      tags: ["Strategic Planning", "Data-Driven Decision Making", "Organizational Leadership"],
+        "Regent University, Virginia Beach, USA | 2021 – 2023 Focus on Strategic Planning, Data-Driven Operations, Organizational Leadership.",
+      tags: [
+        "Strategic Planning",
+        "Data-Driven Decision Making",
+        "Organizational Leadership",
+      ],
     },
     "Doctor of Medicine": {
       about: "University of Aleppo, Syria | 2009 – 2015",
@@ -36,12 +52,12 @@ const Experiences = () => {
 
   return (
     <section className="what-i-do" id="experience">
-      {/* LEFT MENU */}
+      {/* 🔹 LEFT MENU */}
       <div className="left-menu">
         <div className="menu-top">//EXPERIENCES</div>
 
         <ul>
-          {items.map((it) => (
+          {items.map((it: string) => (
             <li
               key={it}
               className={`menu-item ${active === it ? "active" : ""}`}
@@ -53,7 +69,7 @@ const Experiences = () => {
         </ul>
       </div>
 
-      {/* RIGHT PANEL */}
+      {/* 🔹 RIGHT PANEL */}
       <div className="right-panel full-text">
         <hr className="divider" />
 
@@ -65,14 +81,14 @@ const Experiences = () => {
         <hr className="divider" />
 
         <div className="tags-row">
-          {current.tags.map((tag, i) => (
+          {current.tags.map((tag: string, i: number) => (
             <span key={i} className={`tag ${i === 1 ? "tag-active" : ""}`}>
               {tag}
             </span>
           ))}
         </div>
 
-        {/* ✅ Download Resume Link */}
+        {/* 🔹 Download Resume */}
         <a
           href={resumeFile}
           download="Iyad-Arusi.pdf"
@@ -83,6 +99,4 @@ const Experiences = () => {
       </div>
     </section>
   );
-};
-
-export default Experiences;
+}

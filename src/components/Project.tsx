@@ -1,38 +1,43 @@
 import React, { useState } from "react";
 import "../styles.css";
-import project from "../assets/project1.png"; 
-const Project = () => {
+import project from "../assets/project1.png";
+
+export default function Project() {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div className="project" id="projects">
-      {!expanded && (
+      {!expanded ? (
         <>
+          {/* 🔹 Left Column */}
           <div className="left-column">
             <div className="about-btn">ABOUT PROJECT</div>
             <p className="left-description">
-              ABOUT PROJECT BY UNDERSTANDING THE USER NEEDS AND MAPPING OUT THE APP FLOW THROUGH WIREFRAMES.
+              ABOUT PROJECT BY UNDERSTANDING THE USER NEEDS AND MAPPING OUT THE
+              APP FLOW THROUGH WIREFRAMES.
             </p>
-             <div className="project-img">
-            <img src={project} alt="Project preview" />
-          </div>
+
+            <div className="project-img">
+              <img src={project} alt="Project preview" />
+            </div>
+
             <h2 className="left-title">PROJECT TITLE GOES HERE</h2>
           </div>
 
+          {/* 🔹 Right Column */}
           <div className="right-column">
-            <h4> My Work</h4>
-            <h1 className="right-title"> My Recent Project That I Done</h1>
+            <h4>My Work</h4>
+            <h1 className="right-title">My Recent Project That I Done</h1>
             <p className="right-description">
-              I start by understanding the needs and mapping out the app through wireframes
+              I start by understanding the needs and mapping out the app through
+              wireframes
             </p>
             <button className="v-btn" onClick={() => setExpanded(true)}>
               View My Project
             </button>
           </div>
         </>
-      )}
-
-      {expanded && (
+      ) : (
         <div className="expand-card show">
           <h2>PROJECT TITLE GOES HERE</h2>
           <p>
@@ -45,10 +50,10 @@ const Project = () => {
 
           <h4>PROJECT DETAILS</h4>
           <p>
-            - Built with React and styled-components.<br />
-            - Implemented dynamic animations using Framer Motion.<br />
-            - Integrated reusable components for scalability.<br />
-            - Focused on accessibility and user flow.
+            - Built with React and styled-components.
+            <br />- Implemented dynamic animations using Framer Motion.
+            <br />- Integrated reusable components for scalability.
+            <br />- Focused on accessibility and user flow.
           </p>
 
           <h4>USED TECHNOLOGIES</h4>
@@ -66,6 +71,4 @@ const Project = () => {
       )}
     </div>
   );
-};
-
-export default Project;
+}

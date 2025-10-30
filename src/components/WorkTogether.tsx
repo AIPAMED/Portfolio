@@ -2,30 +2,36 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles.css";
 import ContactCard from "./ContactCard";
 
-const WorkTogether = () => {
+export default function WorkTogether() {
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.animation = "none";
-            void entry.target.offsetWidth;
-            entry.target.style.animation = "dropIn 1.2s ease-out forwards";
+            const el = entry.target as HTMLElement;
+            el.style.animation = "none"; // reset
+            void el.offsetWidth; // trigger reflow
+            el.style.animation = "dropIn 1.2s ease-out forwards"; // replay animation
           }
         });
       },
       { threshold: 0.4 }
     );
 
-    if (headingRef.current) observer.observe(headingRef.current);
-    return () => observer.disconnect();
+    const currentHeading = headingRef.current;
+    if (currentHeading) observer.observe(currentHeading);
+
+    return () => {
+      if (currentHeading) observer.unobserve(currentHeading);
+      observer.disconnect();
+    };
   }, []);
 
   // ✅ Your skill words (looped infinitely)
-  const skills = [
+  const skills: string[] = [
     "Project Management",
     "Strategic Planning",
     "Leadership & Coordination",
@@ -49,7 +55,7 @@ const WorkTogether = () => {
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* 🔹 Main Content */}
       <div className="work-content">
         <div className="long-name">IYAD</div>
         <h1 ref={headingRef}>
@@ -59,13 +65,11 @@ const WorkTogether = () => {
           CONTACT WITH ME
         </button>
 
-        {/* Contact Card */}
+        {/* 🔹 Contact Card */}
         <ContactCard show={showContact} onClose={() => setShowContact(false)} />
       </div>
 
       <footer className="footer">©2025 DEVELOPED BY REHAB ELKADIM</footer>
     </section>
   );
-};
-
-export default WorkTogether;
+}

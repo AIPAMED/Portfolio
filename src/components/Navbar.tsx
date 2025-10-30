@@ -5,25 +5,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("#home");
 
-  // 👇 detect which section is visible
+  // 👇 Detect which section is visible
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: IntersectionObserverEntry[]) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setActive(`#${entry.target.id}`);
+            setActive(`#${(entry.target as HTMLElement).id}`);
           }
         });
       },
-      { threshold: 0.5 } // adjust sensitivity
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => observer.observe(section));
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-  const handleLinkClick = (id) => {
+  const handleLinkClick = (id: string) => {
     setActive(id);
     setOpen(false);
   };
