@@ -4,7 +4,7 @@ import iyad from "../assets/erasebg-transformed.png";
 export default function Hero() {
   return (
     <section className="hero-grid" id="home">
-      <div className="glow-right"></div>
+
 
       {/*  Right side image */}
       <div className="right">

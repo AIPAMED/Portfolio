@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles.css";
 
@@ -9,6 +9,8 @@ interface ContactCardProps {
 
 const ContactCard: React.FC<ContactCardProps> = ({ show, onClose }) => {
   const form = useRef<HTMLFormElement>(null);
+  const [alertMsg, setAlertMsg] = useState<string | null>(null);
+  const [isError, setIsError] = useState(false);
 
   if (!show) return null;
 
@@ -17,18 +19,20 @@ const ContactCard: React.FC<ContactCardProps> = ({ show, onClose }) => {
 
     emailjs
       .sendForm(
-        "service_y1mfa7e",     // from EmailJS dashboard
-        "template_evk5ynv",    // from EmailJS dashboard
+        "service_y1mfa7e",
+        "template_evk5ynv",
         form.current!,
-        "K4Gfm1p8a-sg2NxVO"      // from EmailJS account
+        "K4Gfm1p8a-sg2NxVO"
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          setIsError(false);
+          setAlertMsg("Message sent successfully!");
           form.current?.reset();
         },
         (error) => {
-          alert("Failed to send message. Please try again.");
+          setIsError(true);
+          setAlertMsg("Failed to send message. Please try again.");
           console.error(error);
         }
       );
@@ -37,7 +41,9 @@ const ContactCard: React.FC<ContactCardProps> = ({ show, onClose }) => {
   return (
     <div className="contact-card show">
       <h2>Contact Me</h2>
-      <p>Feel free to reach out for collaborations, freelance work, or any project discussions.</p>
+      <p>
+        Feel free to reach out for collaborations, freelance work, or any project discussions.
+      </p>
 
       <form ref={form} className="contact-form" onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Your Name" required />
@@ -46,7 +52,17 @@ const ContactCard: React.FC<ContactCardProps> = ({ show, onClose }) => {
         <button type="submit">Send Message</button>
       </form>
 
-      <button className="close-btn" onClick={onClose}>Close</button>
+      <button className="close-btn" onClick={onClose}>
+        Close
+      </button>
+
+      {/* Custom centered alert */}
+      {alertMsg && (
+        <div className={`custom-alert ${isError ? "error" : "success"}`}>
+          <p>{alertMsg}</p>
+          <button onClick={() => setAlertMsg(null)}>OK</button>
+        </div>
+      )}
     </div>
   );
 };

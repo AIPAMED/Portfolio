@@ -81,6 +81,88 @@ body, html, #root {
   background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d 70%);
 }
 
+/* full-screen dark -> orangered gradient overlay */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #000000 0%, #2b2b2b 45%, #1a1a1a 100%);
+  z-index: 99999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* fade-out state */
+.preloader-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* card holding text centered and slightly elevated */
+.preloader-card {
+  text-align: center;
+  color: #ffffff;
+  padding: 2rem 2.4rem;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  transform: translateY(0);
+  animation: subtlePop 600ms ease;
+  min-width: 260px;
+}
+
+/* greeting large */
+.preloader-greeting {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.6px;
+}
+
+/* sub text */
+.preloader-sub {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+/* spinner (simple) */
+.preloader-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 4px solid rgba(255,255,255,0.15);
+  border-top-color: rgba(255,255,255,0.95);
+  animation: spin 0.9s linear infinite;
+}
+
+
+canvas {
+  position: absolute;
+  inset: 0;
+}
+
+
+/* small pop animation */
+@keyframes subtlePop {
+  from { transform: translateY(8px) scale(0.98); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ensure it looks good on small screens */
+@media (max-width: 420px) {
+  .preloader-card { padding: 1.2rem 1.4rem; border-radius: 10px; }
+  .preloader-greeting { font-size: 1.6rem; }
+}
+
 .contact-btn-hero {
   background-color: orangered;
   border: none;
@@ -1274,6 +1356,54 @@ nav span{
   .contact-form textarea {
     max-width: 100%;
   }
+}
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, black, orangered);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+  z-index: 9999;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.custom-alert p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.custom-alert button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.custom-alert button:hover {
+  background: #ff4500;
+  color: white;
+}
+
+.custom-alert.success {
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.custom-alert.error {
+  border: 2px solid crimson;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 /* FINAL RESPONSIVE SIDEBAR */
