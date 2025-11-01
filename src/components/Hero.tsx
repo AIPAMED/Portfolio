@@ -1,5 +1,5 @@
 import "../styles.css";
-import iyad from "../assets/iyad-comprissed.jpg";
+import iyad from "../assets/iyad-final.png";
 
 export default function Hero() {
   return (
