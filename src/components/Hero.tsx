@@ -1,5 +1,5 @@
 import "../styles.css";
-import iyad from "../assets/iyad-final.png";
+import iyad from "../assets/Adobe Express - file (1).png";
 
 export default function Hero() {
   return (

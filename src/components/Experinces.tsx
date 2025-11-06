@@ -20,7 +20,7 @@ export default function Experiences() {
     },
     "Research Project Manager": {
       about:
-        "Managed the full lifecycle of 7 international clinical trials across multiple sites, overseeing planning, execution, data integrity, and close-out processes.",
+        "Directed clinical operations for pregnancy-related hematologic research at University of Toronto. Managed regulatory compliance for 7 international trials, coordinated multi-site ethics approvals, and maintained data integrity standards resulting in three peer-reviewed publications in high-impact journals.",
       tags: [
         "Project Lifecycle Management",
         "Data Analysis",

@@ -308,12 +308,27 @@ background: radial-gradient(circle, rgba(255, 89, 0, 0.5), transparent 60%),
   display: flex;
   justify-content: space-between;
 }
-.skill-2{
-  font-family: 'GinzaNarrow';
-  font-weight: 500;
-  font-size: 16px;
+/* 🔧 Fix: give subtitle more space without pushing the bar */
+.skill-2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
   color: #777777;
+  line-height: 1.4;
+  max-width: 100%;
+  height: 60px; /* ensures text fits without moving bar */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* shows up to 3 lines */
+  -webkit-box-orient: vertical;
 }
+
+/* 🔧 optional: increase the column height slightly to balance */
+.column {
+  height: 280px; /* slightly taller to match subtitle space */
+}
+
 .skill-1 span{
   font-size: 16px;
   font-weight: 900;
@@ -552,7 +567,7 @@ nav span{
 
 .image-wrapper {
   z-index: 2;
-  margin-top: 80px;
+  margin-top: 50px;
   position: relative;
   width: 500px;
   height: auto;
@@ -1582,9 +1597,23 @@ nav span{
     text-align: center;
     padding: 4rem 2rem;
   }
+.right {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
-  .right {
-    display: none; /*  Hide Iyad's image on small tablets */
+  .image-wrapper {
+    width: clamp(220px, 60vw, 340px); /* scales smoothly */
+    height: auto;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
   }
 
   .left {
@@ -1637,6 +1666,10 @@ nav span{
 
   .commas {
     font-size: 70px;
+    margin-top: 40px;
+  }
+   .image-wrapper {
+    width: clamp(180px, 70vw, 280px);
     margin-top: 40px;
   }
 }
