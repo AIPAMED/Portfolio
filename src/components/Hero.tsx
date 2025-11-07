@@ -1,5 +1,5 @@
 import "../styles.css";
-import iyad from "../assets/compressed.jpg";
+import iyad from "../assets/bg-rm.png";
 
 export default function Hero() {
   return (

@@ -568,6 +568,7 @@ nav span{
 .image-wrapper {
   z-index: 2;
   margin-top: 50px;
+  border-radius: 10px;
   position: relative;
   width: 500px;
   height: auto;
@@ -1605,7 +1606,7 @@ nav span{
   }
 
   .image-wrapper {
-    width: clamp(220px, 60vw, 340px); /* scales smoothly */
+    width: clamp(160px, 45vw, 260px); /* smaller range than before */
     height: auto;
   }
 
