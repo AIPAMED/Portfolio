@@ -2470,3 +2470,69 @@ nav span{
     font-size: 12px;
   }
 }
+/**/
+/* Make the scroll bar sit at the bottom of the hero only */
+.hero-grid {
+  position: relative; /* allows absolute child positioning */
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* === HERO SCROLL BAR (same look, separate class) === */
+.hero-grid {
+  position: relative;
+  overflow: hidden;
+}
+
+/* identical styling as .scroll-bar but for hero */
+.hero-scroll-bar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  position: absolute;  /* ensures it stays inside hero */
+  bottom: 0;           /* locks it to the bottom */
+  left: 0;
+  z-index: 5;
+}
+
+/* identical styling as .scroll-track */
+.hero-scroll-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: heroScrollText 50s linear infinite;
+}
+
+/* identical styling as .scroll-track span */
+.hero-scroll-track span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 40px;
+  font-size: 14px;
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  color: black;
+  background-color: #fff;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+/* same animation but separate name */
+@keyframes heroScrollText {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

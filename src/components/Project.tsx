@@ -20,7 +20,7 @@ export default function Project() {
               <img src={project} alt="Project preview" />
             </div>
 
-            <h2 className="left-title">AIPAMED Mental Health Triage System</h2>
+            <h2 className="left-title"> Mental Health Triage System</h2>
           </div>
 
           {/*  Right Column */}
@@ -28,7 +28,7 @@ export default function Project() {
             <h4>My Work</h4>
             <h1 className="right-title">My Recent Project That I Done</h1>
             <p className="right-description">
-              Recent work integrating Latest AiTechnologies with Medicine
+              Recent work integrating Latest Ai Technologies with Medicine
             </p>
             <button className="v-btn" onClick={() => setExpanded(true)}>
               View My Project
