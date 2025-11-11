@@ -37,7 +37,7 @@ export default function Project() {
         </>
       ) : (
         <div className="expand-card show">
-          <h2>AIPAMED Mental Health Triage System</h2>
+          <h2>Mental Health Triage System</h2>
           <p>
             AI-powered screening tool addressing university counseling center bottlenecks by conducting structured mental health assessments before human intervention. Routes crisis cases immediately while directing non-urgent students to appropriate resources, reducing counselor triage workload by 60-70%.
           </p>
